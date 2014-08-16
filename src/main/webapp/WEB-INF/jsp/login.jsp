@@ -28,7 +28,7 @@
 
 <body>
 	<script type="text/javascript"
-		src="js/lib/bootstrap-wysihtml5/lib/js/jquery-1.7.2.min.js"></script>
+		src="jquery-1.8.3.js"></script>
 
 
 	<script src="bootstrap/js/bootstrap.js">

@@ -7,28 +7,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login Success</title>
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css" />
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link href="assets/css/bootstrap-united.css" rel="stylesheet" />
-<link href="js/lib/bootstrap-wysihtml5/src/bootstrap-wysihtml5.css"
-	rel="stylesheet" />
+<script type="text/javascript" src="js/lib/tiny.editor.packed.js"></script>
 </head>
 <body>
 
 
 	<script type="text/javascript"
-		src="js/lib/bootstrap-wysihtml5/lib/js/jquery-1.7.2.min.js"></script>
+		src="jquery-1.8.3.js"></script>
 
-
-	<script type="text/javascript"
-		src="js/lib/bootstrap-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
-	<script type="text/javascript"
-		src="js/lib/bootstrap-wysihtml5/lib/js/prettify.js"></script>
-
-
-	<script src="bootstrap/js/bootstrap.js">
-		
+	<script src="bootstrap/js/bootstrap.js">		
 	</script>
-	<script type="text/javascript"
-		src="js/lib/bootstrap-wysihtml5/src/bootstrap-wysihtml5.js"></script>
 
 	<script type="text/javascript" src="js/glogin.js">
 		
@@ -46,21 +37,35 @@
 		</div>
 		<div class="panel-body">
 			<div class="alert alert-dismissable alert-success">
-				<textarea id="textarea" rows="4" cols="50">
+				<textarea id="tinyeditor" rows="4" cols="50">
 				</textarea>
 			</div>
 		</div>
-		<button class="btn btn-primary" onclick="signout();">Log out</button>
+		<button id = "revokeButton" class="btn btn-primary" onclick="signout();document.forms[0].action = 'login.jsp'; return true;" >Log out</button>
 	</div>
 
 
-
-	<script>
-		$('.textarea').wysihtml5();
-	</script>
-
-	<script type="text/javascript" charset="utf-8">
-		$(prettyPrint);
-	</script>
+<script>
+var editor = new TINY.editor.edit('editor', {
+	id: 'tinyeditor',
+	width: 584,
+	height: 175,
+	cssclass: 'tinyeditor',
+	controlclass: 'tinyeditor-control',
+	rowclass: 'tinyeditor-header',
+	dividerclass: 'tinyeditor-divider',
+	controls: ['bold', 'italic', 'underline', 'strikethrough', '|', 'subscript', 'superscript', '|',
+		'orderedlist', 'unorderedlist', '|', 'outdent', 'indent', '|', 'leftalign',
+		'centeralign', 'rightalign', 'blockjustify', '|', 'unformat', '|', 'undo', 'redo', 'n',
+		'font', 'size', 'style', '|', 'image', 'hr', 'link', 'unlink', '|', 'print'],
+	footer: true,
+	fonts: ['Verdana','Arial','Georgia','Trebuchet MS'],
+	xhtml: true,
+	bodyid: 'editor',
+	footerclass: 'tinyeditor-footer',
+	toggle: {text: 'source', activetext: 'wysiwyg', cssclass: 'toggle'},
+	resize: {cssclass: 'resize'}
+});
+</script>
 </body>
 </html>
