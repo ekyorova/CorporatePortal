@@ -31,7 +31,6 @@ public class Student {
 	private String lastName;
 	
 	@NotEmpty
-	@Size(min=4, max=8)
 	private String password;
 	
 	@NotEmpty

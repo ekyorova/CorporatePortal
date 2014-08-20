@@ -65,7 +65,7 @@ public class StudentController {
 	        System.out.println(ex.getMessage());
 	    }
 		return sb.toString();
-	}
+	}      
 
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login(Model model) {
@@ -79,9 +79,9 @@ public class StudentController {
 		if (result.hasErrors()) {
 			return "login";
 		} else {
-			boolean found = studentService.findByLogin(userLogin.getUserName(), userLogin.getPassword());
+			boolean found = studentService.findByLogin(userLogin.getUserName(), encryptPassword(userLogin.getPassword()));
 			if (found) {				
-				return "success";
+				return "redirect:posts.html";
 			} else {				
 				return "failure";
 			}

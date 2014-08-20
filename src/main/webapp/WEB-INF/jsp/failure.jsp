@@ -17,42 +17,11 @@
 	<script src="bootstrap/js/bootstrap.js">
 		
 	</script>
-	<div class="navbar navbar-default">
-
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target=".navbar-responsive-collapse">
-				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-		</div>
-
-		<div class="navbar-collapse collapse navbar-responsive-collapse">
-			<form class="navbar-form navbar-right">
-				<input type="text" class="form-control" placeholder="Search">
-			</form>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/StudentEnrollmentWithSpring">Home</a></li>
-				<li><a href="signup.html">Signup</a></li>
-				<li class="active"><a href="login.html">Login</a></li>
-				<li class="dropdown"><a href="#" class="dropdown-toggle"
-					data-toggle="dropdown">Explore<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">Contact us</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Further Actions</a></li>
-					</ul></li>
-			</ul>
-		</div>
-		<!-- /.nav-collapse -->
-	</div>
-
-	<!-- 
-	<legend>Student Enrollment Login Success</legend>
-	 -->
+	<div id="navigation"><jsp:include page="include/navbar.jsp" /></div>
+	
 	<div class="panel panel-danger">
 		<div class="panel-heading">
-			<h3 class="panel-title">Student Enrollment Login failure</h3>
+			<h3 class="panel-title">User Enrollment Login failure</h3>
 		</div>
 		<div class="panel-body">
 			<div class="alert alert-dismissable alert-danger">
@@ -62,8 +31,6 @@
 			</div>
 		</div>
 	</div>
-	<div></div>
-	<div></div>
 
 	<a class="btn btn-primary" href="<spring:url value="login.html"/>">Try
 		again?</a>

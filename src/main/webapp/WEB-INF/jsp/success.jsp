@@ -27,13 +27,10 @@
 
 
 	<div id="navigation"><jsp:include page="include/navbar.jsp" /></div>
-
-	<!-- 
-	<legend>Student Enrollment Login Success</legend>
-	 -->
+	
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">Student Enrollment Login success</h3>
+			<h3 class="panel-title">Student Post</h3>
 		</div>
 		<div class="panel-body">
 			<div class="alert alert-dismissable alert-success">
@@ -41,7 +38,11 @@
 				</textarea>
 			</div>
 		</div>
-		<button id = "revokeButton" class="btn btn-primary" onclick="signout();document.forms[0].action = 'login.jsp'; return true;" >Log out</button>
+		<button id = "revokeButton" class="btn btn-primary" 
+		onclick="" >Save post</button>
+		
+		<button id = "revokeButton" class="btn btn-primary" 
+		onclick="signout();document.forms[0].action = 'login.jsp'; return true;" >Log out</button>
 	</div>
 
 

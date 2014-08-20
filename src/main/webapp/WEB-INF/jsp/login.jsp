@@ -44,8 +44,6 @@
 				<p>Login to explore the complete features!</p>
 			</div>
 		</div>
-
-		<div></div>
 	</div>
 
 	<div class="col-lg-6 col-lg-offset-3">
