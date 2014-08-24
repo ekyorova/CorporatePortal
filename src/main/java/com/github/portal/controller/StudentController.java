@@ -45,6 +45,7 @@ public class StudentController {
 			String encryptedPass = encryptPassword(student.getPassword());
 			student.setPassword(encryptedPass);
 			studentService.save(student);
+			model.addAttribute("user", student.getUserName());
 			model.addAttribute("message", "Saved student details");
 			return "redirect:login.html";
 		}

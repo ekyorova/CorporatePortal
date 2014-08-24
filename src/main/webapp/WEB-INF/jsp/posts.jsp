@@ -3,6 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -26,23 +27,23 @@
 
 	<div id="navigation"><jsp:include page="include/navbar.jsp" /></div>
 
-	<div class="panel panel-success">
-		<div class="panel-heading">
-			<h3 class="panel-title">Student Post</h3>
-		</div>
-		<div class="panel-body">
-			<div class="alert alert-dismissable alert-success">
-				<textarea name="content" id="tinyeditor" rows="4" cols="50">
+	<div class="panel-body">
+		<form:form id="postForm" method="post"
+							class="bs-example form-horizontal" commandName="post">
+		<label for="titleInput">User Title</label>
+		<form:input type="text" path="title" id="titleInput"
+			placeholder="Title" />
+
+		<div class="alert alert-dismissable alert-success">
+			<textarea name="fileContent" id="tinyeditor" rows="4" cols="50">
 				</textarea>
-			</div>
-			<button id="revokeButton" class="btn btn-primary" >Save
-				post</button>
-
-			<button id="revokeButton" class="btn btn-default"
-				onclick="signout();document.forms[0].action = 'login.jsp'; return true;">Log
-				out</button>
 		</div>
-
+		<input id="svButton" type="submit" class="btn btn-primary"
+			title="Save post" name="Save post" /> <input id="loButton"
+			type="button" class="btn btn-default" title="Log out" name="Log out"
+			onclick="signout();" />
+			
+			</form:form>
 	</div>
 
 

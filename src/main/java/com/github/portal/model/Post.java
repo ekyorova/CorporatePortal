@@ -27,7 +27,6 @@ public class Post {
 	@JoinColumn(name = "creatorID")
 	private Student student;
 	
-	@NotEmpty
 	@Column(name = "isMain", columnDefinition = "BIT", length = 1)
 	private boolean isMain;
 	

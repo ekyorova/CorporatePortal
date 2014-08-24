@@ -48,5 +48,6 @@ function disconnectUser(access_token) {
 
 function signout() {
 	$('#revokeButton').click(disconnectUser);
+	window.location.href = "login.html";
 }
 

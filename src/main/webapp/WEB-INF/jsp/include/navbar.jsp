@@ -13,7 +13,7 @@
 				<input type="text" class="form-control" placeholder="Search">
 			</form>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/CorporatePortal">Home</a></li>
+				<li><a href="/CorporatePortalWithSpring">Home</a></li>
 				<li><a href="signup.html">Signup</a></li>
 				<li class="active"><a href="login.html">Login</a></li>
 			</ul>
