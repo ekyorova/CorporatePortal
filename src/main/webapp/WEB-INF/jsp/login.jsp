@@ -90,7 +90,7 @@
 							data-requestvisibleactions="http://schema.org/AddAction"
 							data-scope="https://www.googleapis.com/auth/plus.login"> </span>
 						</span>
-
+<!--  client secret doE2QPy8Z1qYZUQuqmXU_PFU -->
 					</div>
 				</div>
 			</div>

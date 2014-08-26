@@ -19,5 +19,9 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-  <display-name>Archetype Created Web Application</display-name>
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+</listener>
+  <display-name>Corporate Portal Web Application</display-name>
+
 </web-app>

@@ -1,34 +1,29 @@
+--<ScriptOptions statementTerminator=";"/>
+
+CREATE TABLE posts (
+	postID INT NOT NULL,
+	title VARCHAR(100),
+	fileContent VARCHAR(50),
+	creatorID BIGINT,
+	isMain BIT,
+	postPreviousID INT,
+	PRIMARY KEY (postID)
+) ENGINE=InnoDB;
+
 CREATE TABLE student (
-  id` bigint(20) NOT NULL AUTO_INCREMENT,
-  emailAddress varchar(255) NOT NULL,
-  firstName varchar(255) NOT NULL,
-  lastName varchar(255) NOT NULL,
-  password varchar(8) NOT NULL,
-  userName varchar(20) NOT NULL,
-  PRIMARY KEY (id)
-)
+	id BIGINT NOT NULL,
+	dateOfBirth DATE,
+	emailAddress VARCHAR(255) NOT NULL,
+	firstName VARCHAR(255) NOT NULL,
+	lastName VARCHAR(255) NOT NULL,
+	password VARCHAR(255),
+	userName VARCHAR(20) NOT NULL,
+	gaccount BIT,
+	token CHAR(1),
+	PRIMARY KEY (id)
+) ENGINE=InnoDB;
 
-create table studentEnrollment.posts(
- postID INT NOT NULL AUTO_INCREMENT,
- title VARCHAR(100),
- fileContent VARCHAR(50),
- creatorID bigint(20),
- isMain boolean,
- PRIMARY KEY (postID),
- CONSTRAINT fk_creatorID FOREIGN KEY (creatorID)
- REFERENCES student(id)
- )
- 
- ALTER TABLE posts ADD FOREIGN KEY(postPreviousID) REFERENCES
-posts(postID) ON DELETE CASCADE ;
+CREATE INDEX postPreviousID ON posts (postPreviousID ASC);
 
- create table studentEnrollment.connections(
- connectionID INT NOT NULL AUTO_INCREMENT,
- mainpostID INT,
- conpostID INT,
- PRIMARY KEY (connectionID),
- CONSTRAINT fk_mainpostID FOREIGN KEY (mainpostID)
- REFERENCES posts(postID),
- CONSTRAINT fk_conpostID FOREIGN KEY (conpostID)
- REFERENCES posts(postID)
- )
+CREATE INDEX fk_creatorID ON posts (creatorID ASC);
+

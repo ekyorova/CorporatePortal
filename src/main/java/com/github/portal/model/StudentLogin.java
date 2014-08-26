@@ -4,7 +4,7 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-public class StudentLogin {
+public class StudentLogin{
 
 	@NotEmpty
 	@Size(min=4, max=20)

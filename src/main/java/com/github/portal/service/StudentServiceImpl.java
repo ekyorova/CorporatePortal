@@ -27,6 +27,10 @@ public class StudentServiceImpl implements StudentService {
 		
 		return false;		
 	}
+	
+	public Student findStudentByName(String userName) {	
+		return studentRepository.findByUserName(userName);
+	}
 
 	public boolean findByUserName(String userName) {
 		Student stud = studentRepository.findByUserName(userName);

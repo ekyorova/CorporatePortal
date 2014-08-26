@@ -24,26 +24,20 @@
 		
 	</script>
 
-
-	<div id="navigation"><jsp:include page="include/navbar.jsp" /></div>
+	<div id="navigation"><jsp:include page="include/user-navbar.jsp" /></div>
 
 	<div class="panel-body">
 		<form:form id="postForm" method="post"
-							class="bs-example form-horizontal" commandName="post">
-		<label for="titleInput">User Title</label>
-		<form:input type="text" path="title" id="titleInput"
-			placeholder="Title" />
-
-		<div class="alert alert-dismissable alert-success">
-			<textarea name="fileContent" id="tinyeditor" rows="4" cols="50">
+			class="bs-example form-horizontal" commandName="post">
+			<div class="alert alert-dismissable alert-success">
+				<form:input type="text" path="title" id="titleInput"
+					placeholder="Title" />
+				<br />
+				<textarea name="fileContent" id="tinyeditor">
 				</textarea>
-		</div>
-		<input id="svButton" type="submit" class="btn btn-primary"
-			title="Save post" name="Save post" /> <input id="loButton"
-			type="button" class="btn btn-default" title="Log out" name="Log out"
-			onclick="signout();" />
-			
-			</form:form>
+			</div>
+			<input id="svButton" type="submit" class="btn btn-primary" value="Save post" />
+		</form:form>
 	</div>
 
 
